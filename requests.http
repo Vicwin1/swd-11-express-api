@@ -1,0 +1,106 @@
+@baseUrl = http://localhost:3000
+
+### List all products
+# @name listProducts
+GET {{baseUrl}}/api/products
+Accept: application/json
+
+### Get a product by ID
+# @name getProduct
+GET {{baseUrl}}/api/products/0f8fad5b-d9cb-469f-a165-70867728950e
+Accept: application/json
+
+### Check API health
+# @name health
+GET {{baseUrl}}/api/health
+Accept: application/json
+
+### Search products by category and query
+# @name searchProducts
+GET {{baseUrl}}/api/products?category=Electronics&q=speaker
+Accept: application/json
+
+### Sort products by ascending price
+# @name sortProducts
+GET {{baseUrl}}/api/products?sort=price
+Accept: application/json
+
+### Sort products by descending price
+# @name sortProductsDescending
+GET {{baseUrl}}/api/products?sort=-price
+Accept: application/json
+
+### Create a product (run before the update, patch, and delete requests)
+# @name create
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+  "name": "REST Client Demo Product",
+  "sku": "DEM-4242",
+  "category": "Accessories",
+  "price": 29.95,
+  "stock": 12
+}
+
+### Reject invalid product fields (422)
+# @name invalidCreate
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+  "name": "X",
+  "sku": "bad-sku",
+  "category": "Food",
+  "price": 0,
+  "stock": -1
+}
+
+### Reject an SKU already present in the seed data (422)
+# @name duplicateSku
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Duplicate SKU Example",
+  "sku": "HOM-0001",
+  "category": "Home",
+  "price": 10,
+  "stock": 1
+}
+
+### Replace the created product (PUT requires every product field)
+# @name updateProduct
+PUT {{baseUrl}}/api/products/{{create.response.body.data.id}}
+Content-Type: application/json
+
+{
+  "name": "REST Client Demo Product (updated)",
+  "sku": "DEM-4242",
+  "category": "Accessories",
+  "price": 31.5,
+  "stock": 15
+}
+
+### Change only the stock (PATCH)
+# @name patchProduct
+PATCH {{baseUrl}}/api/products/{{create.response.body.data.id}}
+Content-Type: application/json
+
+{
+  "stock": 8
+}
+
+### Delete the created product (204, no response body)
+# @name deleteProduct
+DELETE {{baseUrl}}/api/products/{{create.response.body.data.id}}
+
+### Product not found (404)
+# @name missingProduct
+GET {{baseUrl}}/api/products/00000000-0000-4000-8000-000000000000
+Accept: application/json
+
+### Unknown route (404)
+# @name unknownRoute
+GET {{baseUrl}}/api/not-a-route
+Accept: application/json

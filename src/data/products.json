@@ -1,0 +1,74 @@
+[
+  {
+    "id": "0f8fad5b-d9cb-469f-a165-70867728950e",
+    "name": "Everyday Ceramic Mug",
+    "sku": "HOM-0001",
+    "category": "Home",
+    "price": 14.99,
+    "stock": 42,
+    "createdAt": "2025-01-12T10:15:00.000Z"
+  },
+  {
+    "id": "1c6e4f91-7d34-4f82-9a65-2e6b7c8d9012",
+    "name": "Linen Table Runner",
+    "sku": "HOM-0002",
+    "category": "Home",
+    "price": 38.5,
+    "stock": 18,
+    "createdAt": "2025-02-03T14:30:00.000Z"
+  },
+  {
+    "id": "2a7b5c9d-8e41-4f63-b027-3c9d0e1f2345",
+    "name": "Wireless Charging Stand",
+    "sku": "TEC-0001",
+    "category": "Electronics",
+    "price": 49.99,
+    "stock": 27,
+    "createdAt": "2025-02-18T09:00:00.000Z"
+  },
+  {
+    "id": "3b8c6d0e-9f52-4074-c138-4d0e1f2a3456",
+    "name": "Bluetooth Travel Speaker",
+    "sku": "TEC-0002",
+    "category": "Electronics",
+    "price": 79,
+    "stock": 13,
+    "createdAt": "2025-03-01T16:45:00.000Z"
+  },
+  {
+    "id": "4c9d7e1f-a063-4185-d249-5e1f2a3b4567",
+    "name": "Canvas Market Tote",
+    "sku": "ACC-0001",
+    "category": "Accessories",
+    "price": 24,
+    "stock": 65,
+    "createdAt": "2025-03-14T11:20:00.000Z"
+  },
+  {
+    "id": "5d0e8f2a-b174-4296-e35a-6f2a3b4c5678",
+    "name": "Insulated Steel Water Bottle",
+    "sku": "ACC-0002",
+    "category": "Accessories",
+    "price": 32.95,
+    "stock": 31,
+    "createdAt": "2025-04-06T08:10:00.000Z"
+  },
+  {
+    "id": "6e1f9a3b-c285-43a7-f46b-7a3b4c5d6789",
+    "name": "Hardcover Weekly Planner",
+    "sku": "STA-0001",
+    "category": "Stationery",
+    "price": 19.5,
+    "stock": 54,
+    "createdAt": "2025-04-22T13:05:00.000Z"
+  },
+  {
+    "id": "7f2a0b4c-d396-44b8-a57c-8b4c5d6e7890",
+    "name": "Recycled Paper Notebook Set",
+    "sku": "STA-0002",
+    "category": "Stationery",
+    "price": 12,
+    "stock": 39,
+    "createdAt": "2025-05-09T15:40:00.000Z"
+  }
+]
